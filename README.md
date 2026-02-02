@@ -8,15 +8,21 @@
 
 - All code existed within context of production systems - they are not hobby projects :).
 
+- Before code there is system design ... that's another of my skillsets.
+
 ## Contents
+
+- `/csharp`
+
+  - `/hibou`  A .NET end-to-end application development framework.
 
 - `/python`
   
-  - `/l1-sdk-py`  Python casper-node SDK.
+  - `/l1-sdk-py`  Python SDK for interacting with a layer one blockchain node (casper).
   
   - `/pyessv`  Python library to manage controlled vocabularies used in climate chnage research.
 
-  - `/stests`  Python casper network end to end test simulator.
+  - `/stests`  Python end to end layer one blockchain network (casper) test simulation workflow engine.
 
 - `/typescript`
   
@@ -29,3 +35,9 @@
   - `/cctl`  Bash application to work with a **local** casper-node blockchain network.
   
   - `/mpctl`  Bash application to work with a **local** IRIS-MPC CPU network.
+
+## Further Information
+
+- https://github.com/asladeofgreen?tab=repositories
+
+- https://github.com/siajasl?tab=repositories
