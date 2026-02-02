@@ -1,0 +1,52 @@
+"""Encapsulates details returned after an order is submitted for processing.
+
+"""
+type NewOrder {
+    "Customer's base asset DLT address, used to listen to events."
+    addressOfBaseAsset: String!
+
+    "Customer's quote asset DLT address, used to listen to events."
+    addressOfQuoteAsset: String!
+
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Customer's identifier for internal cross-referencing purposes."
+    customerReferenceID: ID
+
+    "Symbol of exchange upon which order was placed."
+    exchange: ExchangeSymbol!
+
+    "Internal identifier of order being processed."
+    orderID: ID!
+
+    "Price point at which quote is being placed."
+    price: String
+
+    "Amount of asset to be ordered."
+    quantity: String!
+
+    "The order quantity already filled."
+    quantityFilled : String!
+
+    "Internal identifier of quotation submitted to trade engine."
+    quoteID: ID!
+
+    "Timestamp upon which quote was created."
+    quoteTimestamp: Date!
+
+    "The side of the order book to which order applies."
+    side: BookSideEnum!
+
+    "Current order processing state."
+    state: String!
+
+    "Timestamp upon which order was placed upon book."
+    timestamp: Date!
+
+    "Set of matched trades."
+    trades: [TradeInfo]
+
+    "Type of order placed, e.g. MARKET."
+    type: OrderTypeEnum
+}

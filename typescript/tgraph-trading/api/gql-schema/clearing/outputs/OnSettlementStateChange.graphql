@@ -1,0 +1,10 @@
+"""Subscription output: settlement state change.
+
+"""
+type OnSettlementStateChange {
+    "Identifier of a settlement being cleared."
+    settlementID: UUID!
+
+    "New state of settlement."
+    state: String!
+}

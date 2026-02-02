@@ -1,0 +1,13 @@
+"""Enumeration over the types of verification level.
+
+"""
+enum VerificationLevelEnum {
+    "Verification level 1."
+    Level1
+
+    "Verification level 2."
+    Level2
+
+    "Verification level 3."
+    Level3
+}

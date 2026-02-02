@@ -1,0 +1,7 @@
+"""A document's encoding information.
+
+"""
+enum DocumentEncodingEnum {
+    "Base64 encoding."
+    Base64
+}

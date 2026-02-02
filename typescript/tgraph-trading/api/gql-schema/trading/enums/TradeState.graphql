@@ -1,0 +1,13 @@
+"""Enumeration over set of possible trade state.
+
+"""
+enum TradeStateEnum {
+    "Initial state - assigned by trading engine."
+    MATCHED
+
+    "Settled - termination state."
+    SETTLED
+
+    "In error due to settlement issue."
+    SETTLEMENT_ERROR
+}

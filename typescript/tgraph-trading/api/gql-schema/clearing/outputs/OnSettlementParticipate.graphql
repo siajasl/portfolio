@@ -1,0 +1,7 @@
+"""Information passed to counter party responsible for settlement participation.
+
+"""
+type OnSettlementParticipate {
+    "Identifier of settlement being processed."
+    settlementID: UUID!
+}

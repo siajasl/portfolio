@@ -1,0 +1,28 @@
+# import * from "../enums/IdentityCardType.graphql"
+# import * from "../../shared/Scalars.graphql"
+
+"""A person's identity scan information.
+
+"""
+input IdentityCardScanInput {
+    "The official card number."
+    cardNumber: String!
+
+    "The type of identity card."
+    cardType: IdentityCardTypeEnum!
+
+    "Date at which the card is considered invalid."
+    expiryDate: Date!
+
+    "Encoding of the scan of the front of the card."
+    scanEncoding: String!
+
+    "A scan of the front of the card."
+    scanOfFrontis: String!
+
+    "A scan of the reverse of the card."
+    scanOfReverse: String
+
+    "A scan of the person's selfie."
+    scanOfSelfie: String!
+}

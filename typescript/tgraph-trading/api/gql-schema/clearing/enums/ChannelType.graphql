@@ -1,0 +1,10 @@
+"""Enumeration over channel types.
+
+"""
+enum ChannelTypeEnum {
+    "First channel opened in atomic swap process."
+    INITIATE
+
+    "Second channel opened in atomic swap process."
+    PARTICIPATE
+}

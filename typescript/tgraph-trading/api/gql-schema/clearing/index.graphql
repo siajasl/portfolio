@@ -1,0 +1,72 @@
+# import * from "../shared/Envelope.graphql"
+
+# import * from "enums/ChannelType.graphql"
+# import * from "enums/TransactionType.graphql"
+
+# import * from "inputs/DoRegisterInitiationDelegatedTxsUtxoData.graphql"
+# import * from "inputs/DoRegisterParticipationDelegatedTxsUtxoDataInput.graphql"
+# import * from "inputs/DoRegisterSecret.graphql"
+# import * from "inputs/DoSettle.graphql"
+# import * from "inputs/GetChannel.graphql"
+# import * from "inputs/GetOpenSettlements.graphql"
+# import * from "inputs/GetSettlement.graphql"
+# import * from "inputs/GetSettlementList.graphql"
+# import * from "inputs/OnSettlementComplete.graphql"
+# import * from "inputs/OnSettlementFinalise.graphql"
+# import * from "inputs/OnSettlementInitiate.graphql"
+# import * from "inputs/OnSettlementParticipate.graphql"
+# import * from "inputs/OnSettlementStateChange.graphql"
+
+# import * from "outputs/Channel.graphql"
+# import * from "outputs/OnSettlementComplete.graphql"
+# import * from "outputs/OnSettlementFinalise.graphql"
+# import * from "outputs/OnSettlementInitiate.graphql"
+# import * from "outputs/OnSettlementParticipate.graphql"
+# import * from "outputs/OnSettlementStateChange.graphql"
+# import * from "outputs/Settlement.graphql"
+# import * from "outputs/Transaction.graphql"
+
+type Mutation {
+    "Settle trade(s) between counter-parties."
+    settle(input: DoSettleInput!, envelope: EnvelopeInput!): Boolean
+
+    "Register delegated tx UTXO data on initiation channel."
+    registerInitiationDelegatedTxsUtxoData(input: DoRegisterInitiationDelegatedTxsUtxoDataInput!, envelope: EnvelopeInput!): Boolean
+
+    "Register delegated tx UTXO data on participation channel."
+    registerParticipationDelegatedTxsUtxoData(input: DoRegisterParticipationDelegatedTxsUtxoDataInput!, envelope: EnvelopeInput!): Boolean
+
+    "Register secret used to redeem settlement channels."
+    registerSettlementSecret(input: DoRegisterSecretInput, envelope: EnvelopeInput!): Boolean
+}
+
+type Query {
+    "Returns channel information."
+    getChannel(input: GetChannelInput, envelope: EnvelopeInput!): Channel
+
+    "Returns settlement information."
+    getSettlement(input: GetSettlementInput, envelope: EnvelopeInput!): Settlement
+
+    "Returns a customer's open settlements."
+    getOpenSettlements(input: GetOpenSettlementsInput, envelope: EnvelopeInput!): [Settlement]
+
+    "Returns collection of settlement information."
+    getSettlementList(input: GetSettlementListInput, envelope: EnvelopeInput!): [Settlement]
+}
+
+type Subscription {
+    "Event raised when settlement is completed - post finialisation."
+    onSettlementComplete(input: OnSettlementCompleteInput!, envelope: EnvelopeInput!): OnSettlementComplete!
+
+    "Event raised when settlement is finalised."
+    onSettlementFinalise(input: OnSettlementFinaliseInput!, envelope: EnvelopeInput!): OnSettlementFinalise!
+
+    "Event raised when a new settlement is initiation."
+    onSettlementInitiate(input: OnSettlementInitiateInput!, envelope: EnvelopeInput!): OnSettlementInitiate!
+
+    "Event raised when settlement participation is demanded."
+    onSettlementParticipate(input: OnSettlementParticipateInput!, envelope: EnvelopeInput!): OnSettlementParticipate!
+
+    "Event raised when a settlement state transition occurs."
+    onSettlementStateChange(input: OnSettlementStateChangeInput!, envelope: EnvelopeInput!): OnSettlementStateChange!
+}

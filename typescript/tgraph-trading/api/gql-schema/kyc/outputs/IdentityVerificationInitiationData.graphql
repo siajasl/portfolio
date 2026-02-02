@@ -1,0 +1,10 @@
+"""Identity verifier's verification initiation API response data.
+
+"""
+type IdentityVerificationInitiationData {
+    "Verifier's iframe url for rednering in a front-end."
+    iframeUrl: String!
+
+    "Identity verifier's transaction reference."
+    verificationTxReference: String!
+}

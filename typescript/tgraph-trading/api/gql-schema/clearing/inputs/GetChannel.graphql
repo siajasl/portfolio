@@ -1,0 +1,10 @@
+"""Information submitted when requesting a channel.
+
+"""
+input GetChannelInput {
+    "Channel identifier."
+    channelID: UUID!
+
+    "Customer identifier."
+    customerID: CustomerID!
+}

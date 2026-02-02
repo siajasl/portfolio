@@ -1,0 +1,10 @@
+"""Information submitted when requesting a settlement.
+
+"""
+input GetSettlementInput {
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Settlement identifier."
+    settlementID: UUID!
+}

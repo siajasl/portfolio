@@ -1,0 +1,13 @@
+"""A person's identity card information.
+
+"""
+enum IdentityCardTypeEnum {
+    "A passport."
+    Passport
+
+    "A driver's license."
+    DrivingLicence
+
+    "A residence permit."
+    ResidencePermit
+}

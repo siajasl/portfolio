@@ -1,0 +1,10 @@
+# import Mutation.* from "kyc/index.graphql"
+# import Query.* from "kyc/index.graphql"
+
+# import Mutation.* from "clearing/index.graphql"
+# import Query.* from "clearing/index.graphql"
+# import Subscription.* from "clearing/index.graphql"
+
+# import Mutation.* from "trading/index.graphql"
+# import Query.* from "trading/index.graphql"
+# import Subscription.* from "trading/index.graphql"

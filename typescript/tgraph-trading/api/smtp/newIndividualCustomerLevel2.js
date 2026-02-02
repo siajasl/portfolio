@@ -1,0 +1,15 @@
+/**
+ * @fileOverview Dispatches a new individual customer level 2 email.
+ */
+
+// Module imports.
+import * as logger from '../utils/logging';
+
+export default async (input) => {
+    const {
+        email,
+        customerID
+    } = input;
+
+    logger.logTODO('dispatch new individual customer level 2 email');
+}

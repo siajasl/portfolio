@@ -1,0 +1,13 @@
+"""Enumeration over supported exchanges.
+
+"""
+enum ExchangeSymbol {
+    "Trade Telegraph - exchange 01"
+    TT01
+
+    "Trade Telegraph - exchange 02 (OTC)"
+    TT02
+
+    "Trade Telegraph - exchange 03 (Merchant)"
+    TT03
+}

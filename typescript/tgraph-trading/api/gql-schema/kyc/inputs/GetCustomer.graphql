@@ -1,0 +1,9 @@
+# import * from "../../shared/Scalars.graphql"
+
+"""Information required to retrieve customer information. Requires authentication.
+
+"""
+input GetCustomerInput {
+    "Customer's identifier."
+    customerID: ID!
+}

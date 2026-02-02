@@ -1,0 +1,47 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "BirthDetails.graphql"
+# import * from "ContactDetails.graphql"
+# import * from "IdentityCardScan.graphql"
+# import * from "PersonName.graphql"
+# import * from "PostalAddress.graphql"
+
+"""An individual somehow associated to a coporation.
+
+"""
+input AssociatedIndividualInput {
+    "Associated individual's birth details."
+    birthDetails: BirthDetailsInput
+
+    "Associated individual's capacity within an associated entity."
+    capacity: String
+
+    "Associated individual's contact details."
+    contactDetails: ContactDetailsInput
+
+    "Associated individual's expected income in the coming year."
+    expectedYearlySalary: PostiveInt
+
+    "Associated individual's politically exposure state."
+    isPoliticallyExposed: Boolean
+
+    "Associated individual's name."
+    name: PersonNameInput!
+
+    "Associated individual's nationality."
+    nationality: Country
+
+    "Associated individual's proof of employment information."
+    proofOfEmployment: DocumentInput
+
+    "Associated individual's proof of identity card information."
+    proofOfIdentity: IdentityCardScanInput
+
+    "Associated individual's proof of residency information."
+    proofOfResidency: [DocumentInput]
+
+    "Associated individual's proof of source of funds information."
+    sourceOfFunds: DocumentInput
+
+    "Associated individual's proof of source of wealth information."
+    sourceOfWealth: DocumentInput
+}

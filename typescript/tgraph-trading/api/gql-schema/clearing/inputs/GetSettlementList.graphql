@@ -1,0 +1,19 @@
+"""Information submitted when requesting a customer's settlements.
+
+"""
+input GetSettlementListInput {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum
+
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Settlement state."
+    state: String
+
+    "Time interval from."
+    fromDate: Date
+
+    "Time interval to."
+    toDate: Date
+}

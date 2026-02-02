@@ -1,0 +1,7 @@
+"""Information submitted when subscribing to settlement finalisation event.
+
+"""
+input OnSettlementFinaliseInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

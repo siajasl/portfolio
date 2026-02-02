@@ -1,0 +1,40 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "../enums/VerificationStatus.graphql"
+# import * from "ContactDetails.graphql"
+# import * from "CorporateCustomer_AssociatedParties.graphql"
+# import * from "CorporateCustomer_RequiredDocuments.graphql"
+
+"""An entity registered as a corporation trading upon the platform.
+
+"""
+type CorporateCustomer {
+    "Corporation's associated parties such as signatories directors ...etc."
+    associatedParties: CorporateCustomerAssociatedParties!
+
+    "Corporation's contact details."
+    contactDetails: ContactDetails!
+
+    "Corporation's customer identifier."
+    customerID: ID!
+
+    "Corporation's expected investment in year ahead."
+    expectedYearlyInvestment: PostiveInt!
+
+    "Flag indicating if corporation is in any way assosciated with a politically exposed person."
+    isPoliticallyExposed: Boolean!
+
+    "Corporation's official trading name."
+    name: String!
+
+    "Corporation's registration number."
+    registrationNumber: String!
+
+    "Set of documents regarding the corporation that are required by law."
+    requiredDocuments: CorporateCustomerRequiredDocuments!
+
+    "Corporation's current verification level."
+    verificationLevel: VerificationLevelEnum!
+
+    "Corporation's verification status."
+    verificationStatus: VerificationStatusEnum!
+}

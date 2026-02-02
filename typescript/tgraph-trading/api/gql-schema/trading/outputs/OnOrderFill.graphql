@@ -1,0 +1,16 @@
+"""Encpasulates details regarding an order fill (full | partial).
+
+"""
+type OnOrderFill {
+    "Customer's order identifier."
+    customerReferenceID: ID
+
+    "Identifier of order filled."
+    orderID: UUID!
+
+    "Identifier of settlement to be processed."
+    settlementID: UUID!
+
+    "Identifier of fill."
+    tradeID: UUID!
+}

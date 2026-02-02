@@ -1,0 +1,31 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "./AssociatedIndividual.graphql"
+# import * from "./AssociatedEntity.graphql"
+# import * from "./ContactDetails.graphql"
+# import * from "./Document.graphql"
+# import * from "./BirthDetails.graphql"
+# import * from "./PersonName.graphql"
+# import * from "./PostalAddress.graphql"
+
+"""Level 1 individual customer registration information.
+
+"""
+input RegisterIndividualCustomerLevel1Input {
+    "Customer's date of birth information."
+    birthDetails: BirthDetailsInput!
+
+    "Customer's contact details."
+    contactDetails: ContactDetailsInput!
+
+    "Customer's identifier."
+    customerID: ID!
+
+    "Customer's name."
+    name: PersonNameInput!
+
+    "Customer's nationality."
+    nationality: Country!
+
+    "Identity verifier's transaction reference."
+    verificationTxReference: String!
+}

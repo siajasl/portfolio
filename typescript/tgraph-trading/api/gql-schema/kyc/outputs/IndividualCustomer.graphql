@@ -1,0 +1,65 @@
+# import * from "AssociatedEntity.graphql"
+# import * from "AssociatedIndividual.graphql"
+# import * from "BirthDetails.graphql"
+# import * from "IdentityCardScan.graphql"
+# import * from "PersonName.graphql"
+# import * from "TelephoneNumber.graphql"
+# import * from "../enums/VerificationLevel.graphql"
+# import * from "../enums/VerificationStatus.graphql"
+# import * from "../../shared/Scalars.graphql"
+
+"""An individual using the platform.
+
+"""
+type IndividualCustomer {
+    "Individual's birth details."
+    birthDetails: BirthDetails
+
+    "Individual's contact details."
+    contactDetails: ContactDetails
+
+    "Individual's customer identifier."
+    customerID: ID!
+
+    "Individual's expected investment in year ahead."
+    expectedYearlyInvestment: PostiveInt
+
+    "Individual's expected income in the coming year."
+    expectedYearlySalary: PostiveInt
+
+    "Individual's agent representation flag."
+    isActingAsAgent: Boolean
+
+    "Individual's politically exposure status."
+    isPoliticallyExposed: Boolean
+
+    "Individual's name."
+    name: PersonName
+
+    "Individual's nationality."
+    nationality: Country
+
+    "Principle when individual is acting as an agent to an entity."
+    principleEntity: AssociatedEntity
+
+    "Principle when individual is acting as an agent to another individual."
+    principleIndividual: AssociatedIndividual
+
+    "Individual's proof of identity card information."
+    proofOfIdentity: IdentityCardScan
+
+    "Individual's proof of residency information."
+    proofOfResidency: [Document]
+
+    "Individual's proof of source of funds information."
+    sourceOfFunds: Document
+
+    "Individual's proof of source of wealth information."
+    sourceOfWealth: Document
+
+    "Individual's current verification level."
+    verificationLevel: VerificationLevelEnum!
+
+    "Individual's current verification status."
+    verificationStatus: VerificationStatusEnum!
+}

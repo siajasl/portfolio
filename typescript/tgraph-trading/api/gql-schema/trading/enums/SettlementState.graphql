@@ -1,0 +1,61 @@
+"""Enumeration over settlment states.
+
+"""
+enum SettlementStateEnum {
+    "Initial state - assigned by clearing engine."
+    New
+
+    "Initiate channel setup: awaiting."
+    InitiateSetupAwaiting
+
+    "Initiate channel setup: timeout (termination state)."
+    InitiateSetupTimeout
+
+    "Initiate channel setup: established."
+    InitiateSetupDone
+
+    "Initiate channel refund: awaiting."
+    InitiateRefundAwaiting
+
+    "Initiate channel refund: success (termination state)."
+    InitiateRefundSuccess
+
+    "Initiate channel refund: error (termination state)."
+    InitiateRefundError
+
+    "Participate channel setup: awaiting."
+    ParticipateSetupAwaiting
+
+    "Participate channel setup: timeout (termination state)."
+    ParticipateSetupTimeout
+
+    "Participate channel setup: done."
+    ParticipateSetupDone
+
+    "State after onSettlementFinalise == onRegisterSecret event has been sent."
+    SecretRegistrationAwaiting
+
+    "State if registerSettlementSecret has not been called after x seconds."
+    SecretRegistrationTimeout
+
+    "State if registerSettlementSecret has not been called after x seconds."
+    SecretRegistrationDone
+
+    "Both channels redeem: awaiting."
+    RedeemAllAwaiting
+
+    "Both channels redeem: success (termination state)."
+    RedeemAllSuccess
+
+    "Both channels redeem: error (termination state)."
+    RedeemAllError
+
+    "Both channels refund: awaiting."
+    RefundAllAwaiting
+
+    "Both channels refund: success (termination state)."
+    RefundAllSuccess
+
+    "Both channels refund: error (termination state)."
+    RefundAllError
+}

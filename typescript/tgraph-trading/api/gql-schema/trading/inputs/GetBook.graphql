@@ -1,0 +1,16 @@
+"""Information submitted when requesting an order book.
+
+"""
+input GetBookInput {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Depth to which asks will be returned"
+    askDepth: Int
+
+    "Depth to which bids will be returned"
+    bidDepth: Int
+
+    "Exchange upon which asset pair is being traded."
+    exchange: ExchangeSymbol!
+}

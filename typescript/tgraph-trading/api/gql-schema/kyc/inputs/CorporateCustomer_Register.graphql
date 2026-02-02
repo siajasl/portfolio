@@ -1,0 +1,33 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "./ContactDetails.graphql"
+# import * from "./CorporateCustomer_AssociatedParties.graphql"
+# import * from "./CorporateCustomer_RequiredDocuments.graphql"
+
+"""Corporate customer registration information.
+
+"""
+input RegisterCorporateCustomerInput {
+    "Corporation's associated parties such as signatories, directors ...etc."
+    associatedParties: CorporateCustomerAssociatedPartiesInput!
+
+    "Corporation's contact details."
+    contactDetails: ContactDetailsInput!
+
+    "Corporation's customer identifier."
+    customerID: ID!
+
+    "Corporation's expected investment in year ahead."
+    expectedYearlyInvestment: PostiveInt!
+
+    "Flag indicating if corporation is in any way associated with a politically exposed person."
+    isPoliticallyExposed: Boolean!
+
+    "Corporation's official trading name."
+    name: String!
+
+    "Corporation's registration number."
+    registrationNumber: String!
+
+    "Set of documents regarding the corporation that are required by law."
+    requiredDocuments: CorporateCustomerRequiredDocumentsInput!
+}

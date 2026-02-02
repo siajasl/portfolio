@@ -1,0 +1,10 @@
+"""Enumeration over the sides of an order book.
+
+"""
+enum BookSideEnum {
+    "Buy side."
+    BUY
+
+    "Sell side."
+    SELL
+}

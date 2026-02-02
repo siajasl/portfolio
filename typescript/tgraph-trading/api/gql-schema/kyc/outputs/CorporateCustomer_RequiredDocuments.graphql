@@ -1,0 +1,24 @@
+# import * from "Document.graphql"
+
+"""Set of documents that are required by law.
+
+"""
+type CorporateCustomerRequiredDocuments {
+    "Corporation's articles of association."
+    articlesOfAssociation: Document!
+
+    "Corporation's certificate of good standing."
+    certificateOfGoodStanding: Document!
+
+    "Corporation's incorporation details."
+    certificateOfIncorporation: Document!
+
+    "Corporation's shareholding structure."
+    shareholdingStructure: Document!
+
+    "Corporation's proof of source of funds information."
+    sourceOfFunds: Document!
+
+    "Corporation's proof of source of funds information."
+    sourceOfWealth: Document!
+}

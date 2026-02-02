@@ -1,0 +1,7 @@
+"""Information submitted when requesting a customer's open settlements.
+
+"""
+input GetOpenSettlementsInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

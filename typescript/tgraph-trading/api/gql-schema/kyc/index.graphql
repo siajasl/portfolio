@@ -1,0 +1,53 @@
+# import * from "../shared/Scalars.graphql"
+# import * from "../shared/Envelope.graphql"
+
+# import * from "inputs/GetCustomer.graphql"
+# import * from "inputs/GetIdentityVerificationStatus.graphql"
+
+# import * from "inputs/CorporateCustomer_Register.graphql"
+# import * from "inputs/IndividualCustomerLevel1_Register.graphql"
+# import * from "inputs/IndividualCustomerLevel1_Reject.graphql"
+# import * from "inputs/IndividualCustomerLevel1_Verify.graphql"
+# import * from "inputs/IndividualCustomerLevel2_Register.graphql"
+# import * from "inputs/JumioTxRef.graphql"
+
+# import * from "outputs/CorporateCustomer.graphql"
+# import * from "outputs/CustomerInfo.graphql"
+# import * from "outputs/IdentityVerificationInitiationData.graphql"
+# import * from "outputs/IdentityVerificationStatus.graphql"
+# import * from "outputs/IndividualCustomer.graphql"
+
+
+type Mutation {
+    "Registers a corporate customer with the platform."
+    registerCorporateCustomer(input: RegisterCorporateCustomerInput!, envelope: EnvelopeInput!): Boolean
+
+    "Registers a level 1 individual customer with the platform."
+    registerIndividualCustomerLevel1(input: RegisterIndividualCustomerLevel1Input!, envelope: EnvelopeInput!): Boolean
+
+    "Registers a level 2 individual customer with the platform."
+    registerIndividualCustomerLevel2(input: RegisterIndividualCustomerLevel2Input!, envelope: EnvelopeInput!): Boolean
+
+    "Rejects a level 1 individual customer."
+    rejectIndividualCustomerLevel1(input: RejectIndividualCustomerLevel1Input!, envelope: EnvelopeInput!): String
+
+    "Verifies a level 1 individual customer."
+    verifyIndividualCustomerLevel1(input: VerifyIndividualCustomerLevel1Input!, envelope: EnvelopeInput!): Boolean
+}
+
+type Query {
+    "Returns identity verifier's verification initiation API response data."
+    getIdentityVerificationInitiationData(input: GetCustomerInput!, envelope: EnvelopeInput!): IdentityVerificationInitiationData
+
+    "Returns identity verifier's verification initiation API response data."
+    getIdentityVerificationStatus(input: GetIdentityVerificationStatusInput!, envelope: EnvelopeInput!): IdentityVerificationStatus
+
+    "Returns customer summary information."
+    getCustomerInfo(input: GetCustomerInput!, envelope: EnvelopeInput!): CustomerInfo
+
+    "Returns corporate customer information."
+    getCorporateCustomer(input: GetCustomerInput!, envelope: EnvelopeInput!): CorporateCustomer
+
+    "Returns individual customer information."
+    getIndividualCustomer(input: GetCustomerInput!, envelope: EnvelopeInput!): IndividualCustomer
+}

@@ -1,0 +1,19 @@
+"""A person's name.
+
+"""
+type PersonName {
+    "A person's name prefix e.g. Dr."
+    prefix: String
+
+    "A person's first name e.g. Roland."
+    first: String!
+
+    "A person's middle name e.g. Werner."
+    middle: String
+
+    "A person's last name e.g. Herzog."
+    last: String
+
+    "A person's suffix e.g. Esq."
+    suffix: String
+}

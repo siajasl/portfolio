@@ -1,0 +1,12 @@
+#accessfileDemoApplication {
+    width: 980px;
+    margin:auto;
+}
+
+canvas.ts-af {
+    background-image: url('assets/guilloche-01.png');
+    background-size: contain;
+    background-blend-mode: darken;
+    border: 5px solid black;
+    border-radius: 25px;
+}

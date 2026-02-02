@@ -1,0 +1,7 @@
+"""Information submitted when subscribing to settlement participation event.
+
+"""
+input OnSettlementParticipateInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

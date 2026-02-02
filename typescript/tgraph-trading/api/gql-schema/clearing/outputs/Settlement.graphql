@@ -1,0 +1,42 @@
+"""Trade settlement information.
+
+"""
+type Settlement {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Customer identifier of counter party one."
+    counterPartyOneID: CustomerID!
+
+    "Customer identifier of counter party two."
+    counterPartyTwoID: CustomerID!
+
+    "Swap initiate channel."
+    initiateChannel: Channel!
+
+    "Swap participate channel."
+    participateChannel: Channel!
+
+    "Internal identifier for x-referencing purposes."
+    settlementID: UUID!
+
+    "Settlement state (current)."
+    state: String!
+
+    "Settlement state history."
+    stateHistory: [SettlementState!]
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+}
+
+"""Trade settlement state history.
+
+"""
+type SettlementState {
+    "Settlement state."
+    state: String!
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+}

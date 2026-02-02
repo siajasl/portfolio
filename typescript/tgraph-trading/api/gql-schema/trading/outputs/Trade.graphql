@@ -1,0 +1,37 @@
+"""A trade matched by an exchange.
+
+"""
+type Trade {
+    "Pair of assets being traded."
+    assetPair: String!
+
+    "Identifier of customer."
+    customerID: ID!
+
+    "Symbol of exchange upon which order was placed."
+    exchange: ExchangeSymbol!
+
+    "Identifier of associated order."
+    orderID: ID!
+
+    "Matched price."
+    price: String!
+
+    "Traded quantity."
+    quantity: String!
+
+    "Identifier of settlement for tracking trade clearance."
+    settlementID: ID!
+
+    "Side of order book to which order was submitted."
+    side: String!
+
+    "Current trade state."
+    state: String!
+
+    "Identifier of trade."
+    tradeID: ID!
+
+    "Timestamp when trade was matched."
+    timestamp: Date!
+}

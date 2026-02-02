@@ -1,0 +1,59 @@
+{
+    "assets": [
+        {
+            "symbol": "BTC",
+            "decimals": 8
+        },
+        {
+            "symbol": "ETH",
+            "decimals": 18
+        }
+    ],
+    "exchanges": [
+        {
+            "assetPairs": [
+                "ETHBTC"
+            ],
+            "commissionPercentage": 0.02,
+            "htlcTimeouts": {
+                "initiate": 21600,
+                "participate": 10800,
+                "participateEffective": 7200
+            },
+            "matchingAlgorithm": "STANDARD",
+            "name": "Trade Telegraph Exchange",
+            "symbol": "TT01",
+            "uid": "d815af97-a9dc-4137-a2c2-a38acde6ffe0"
+        },
+        {
+            "assetPairs": [
+                "ETHBTC"
+            ],
+            "commissionPercentage": 0.02,
+            "htlcTimeouts": {
+                "initiate": 21600,
+                "participate": 10800,
+                "participateEffective": 7200
+            },
+            "matchingAlgorithm": "OTC",
+            "name": "Trade Telegraph OTC Desk",
+            "symbol": "TT02",
+            "uid": "0ea4570b-7f22-413f-b572-f603f72f580d"
+        },
+        {
+            "assetPairs": [
+                "ETHBTC"
+            ],
+            "commissionPercentage": 0.02,
+            "htlcTimeouts": {
+                "initiate": 21600,
+                "participate": 10800,
+                "participateEffective": 7200
+            },
+            "matchingAlgorithm": "MERCHANT",
+            "name": "Trade Telegraph Merchant Payment",
+            "symbol": "TT03",
+            "uid": "046d2c9f-9eb7-422b-bc9f-2093ec4e7f31"
+        }
+    ]
+}

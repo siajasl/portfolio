@@ -1,0 +1,37 @@
+"""Represents information required to submit an order.
+
+"""
+input AddOrderInput {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Customer's base asset DLT address, used to listen to events."
+    addressOfBaseAsset: String!
+
+    "Customer's quote asset DLT address, used to listen to events."
+    addressOfQuoteAsset: String!
+
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Customer's identifier for internal cross-referencing purposes."
+    customerReferenceID: ID
+
+    "Exchange to which order is being dispatched."
+    exchange: ExchangeSymbol!
+
+    "Various options affecting order processing behaviour."
+    options: AddOrderOptionsInput
+
+    "Price point at which quote is being placed."
+    price: String
+
+    "The order quantity being placed."
+    quantity: String!
+
+    "The side of the order book to which order applies."
+    side: BookSideEnum!
+
+    "Type of order being placed, e.g. MARKET."
+    type: OrderTypeEnum!
+}

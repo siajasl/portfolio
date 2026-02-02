@@ -1,0 +1,9 @@
+# import * from "../../shared/Scalars.graphql"
+
+"""Information required to reject individual level 1 information. Requires authentication.
+
+"""
+input RejectIndividualCustomerLevel1Input {
+    "Customer's identifier."
+    customerID: ID!
+}

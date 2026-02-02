@@ -1,0 +1,7 @@
+"""Information passed to counter party responsible for settlement initiation.
+
+"""
+type OnSettlementInitiate {
+    "Identifier of settlement being initiated."
+    settlementID: UUID!
+}

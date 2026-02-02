@@ -1,0 +1,10 @@
+"""Customer type information.
+
+"""
+enum CustomerTypeEnum {
+    "A corporate customer."
+    Corporate
+
+    "An individual customer."
+    Individual
+}

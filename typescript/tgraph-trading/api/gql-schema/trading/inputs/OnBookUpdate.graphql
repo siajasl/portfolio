@@ -1,0 +1,7 @@
+"""Information submitted when subscribing to a book update event.
+
+"""
+input OnBookUpdateInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

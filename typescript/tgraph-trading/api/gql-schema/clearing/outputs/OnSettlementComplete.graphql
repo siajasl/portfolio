@@ -1,0 +1,7 @@
+"""Information passed to counter parties at point of settlement completion.
+
+"""
+type OnSettlementComplete {
+    "Identifier of settlement being processed."
+    settlementID: UUID!
+}

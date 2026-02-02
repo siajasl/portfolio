@@ -1,0 +1,43 @@
+"""Settlement channel information.
+
+"""
+type Channel {
+    "Asset being swapped over channel."
+    asset: String!
+
+    "The DLT address from which the asset amount will be transferred"
+    addressFrom: String!
+
+    "The DLT address to which the asset amount will be transferred"
+    addressTo: String!
+
+    "Amount of asset to be exchanged over channel."
+    amount: String!
+
+    "Internal identifier for x-referencing purposes."
+    channelID: UUID!
+
+    "Recommended amount of commission to be paid."
+    commission: String!
+
+    "In case of PARTICIPATE htlcType send htlcHashedSecret of INITIATE htlc."
+    hashedSecret: String
+
+    "Point in unix time when HTLC is considered to have timed out."
+    timeout: String!
+
+    "HTLC deployment transaction information."
+    txContract: Transaction!
+
+    "Redeem transaction information."
+    txRedeem: Transaction!
+
+    "Refund transaction information."
+    txRefund: Transaction!
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+
+    "Channel type."
+    type: ChannelTypeEnum!
+}

@@ -1,0 +1,37 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "./Document.graphql"
+
+"""Level 2 individual customer registration information.
+
+"""
+input RegisterIndividualCustomerLevel2Input {
+    "Individual's customer identifier."
+    customerID: ID!
+
+    "Customer's expected investment in year ahead."
+    expectedYearlyInvestment: PostiveInt!
+
+    "Customer's expected income in the coming year."
+    expectedYearlySalary: PostiveInt!
+
+    "Customer's agent representation flag."
+    isActingAsAgent: Boolean!
+
+    "Customer's politically exposed flag."
+    isPoliticallyExposed: Boolean!
+
+    "Principle when customer is acting as an agent to an entity."
+    principleEntity: AssociatedEntityInput
+
+    "Principle when customer is acting as an agent to another individual."
+    principleIndividual: AssociatedIndividualInput
+
+    "Customer's proof of residency information."
+    proofOfResidency: [DocumentInput]!
+
+    "Individual's proof of source of funds information."
+    sourceOfFunds: DocumentInput!
+
+    "Individual's proof of source of wealth information."
+    sourceOfWealth: DocumentInput!
+}

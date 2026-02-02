@@ -1,0 +1,7 @@
+"""Information submitted when subscribing to settlement initialisation event.
+
+"""
+input OnSettlementInitiateInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

@@ -1,0 +1,10 @@
+"""Information submitted when retrieving a customer's set of orders.
+
+"""
+input GetOpenOrdersInput {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum
+
+    "Customer identifier."
+    customerID: CustomerID!
+}

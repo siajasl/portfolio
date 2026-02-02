@@ -1,0 +1,19 @@
+"""Information submitted when requesting a trade history.
+
+"""
+input GetTradeHistoryInput {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum
+
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Time interval from."
+    dateFrom: Date!
+
+    "Time interval to."
+    dateTo: Date!
+
+    "Trade processing state."
+    state: TradeStateEnum
+}

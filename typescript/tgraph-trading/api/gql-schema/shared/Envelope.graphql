@@ -1,0 +1,18 @@
+# import * from "./Signature.graphql"
+
+"""Contextual information supplied with each request.
+
+"""
+input EnvelopeInput {
+    "Identifier for request correlation."
+    correlationID: ID!
+
+    "A nonce for request de-duplication."
+    nonce: UUID!
+
+    "Payload signature for request authentication."
+    signature: SignatureInput!
+
+    "A timestamp for request validity."
+    timestamp: Date!
+}

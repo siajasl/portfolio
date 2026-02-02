@@ -1,0 +1,50 @@
+"""A book containing a set of bids & asks, i.e. orders.
+
+"""
+type Book {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Set of asks - i.e. sells."
+    asks: [BookLevel]!
+
+    "Set of bids - i.e. buys."
+    bids: [BookLevel]!
+
+    "Exchange with which book is associated."
+    exchange: ExchangeSymbol!
+}
+
+"""A price specific set (level) of orders from an order book.
+
+"""
+type BookLevel {
+    "Price point at which orders exist."
+    price: String!
+
+    "Total quantity of orders at this price"
+    quantity: String!
+
+    "Set of associated orders."
+    orders: [BookEntry]!
+}
+
+"""An entry within an order book.
+
+"""
+type BookEntry {
+    "The price of order being placed."
+    price: String
+
+    "The order quantity being placed."
+    quantity: String!
+
+    "The side of the order book to which order applies."
+    side: BookSideEnum!
+
+    "The type of order being made."
+    type: OrderTypeEnum!
+
+    "The order's unique identifier."
+    uid: String!
+}

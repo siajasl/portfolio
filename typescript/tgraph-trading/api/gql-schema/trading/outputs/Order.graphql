@@ -1,0 +1,58 @@
+"""Represents order related information.
+
+"""
+type Order {
+    "Customer's base asset DLT address, used to listen to events."
+    addressOfBaseAsset: String!
+
+    "Customer's quote asset DLT address, used to listen to events."
+    addressOfQuoteAsset: String!
+
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Customer's identifier for internal cross-referencing purposes."
+    customerReferenceID: ID
+
+    "Symbol of exchange upon which order was placed."
+    exchange: ExchangeSymbol!
+
+    "Identifier of exchange upon which order was placed."
+    exchangeID: ID
+
+    "Identifier of order placed upon exchange."
+    orderID: ID
+
+    "Price point at which a trade is being offered."
+    price: String!
+
+    "Amount of asset to be ordered."
+    quantity: String!
+
+    "Amount of asset already filled."
+    quantityFilled: String!
+
+    "Identifier of quote originally submitted to exchange."
+    quoteID: String!
+
+    "Timestamp upon which quote was created."
+    quoteTimestamp: Date!
+
+    "The side of the order book to which order applies."
+    side: BookSideEnum!
+
+    "Current order processing state."
+    state: String!
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+
+    "Set of associated trades."
+    trades: [TradeInfo]
+
+    "Type of order placed, e.g. MARKET."
+    type: OrderTypeEnum
+}

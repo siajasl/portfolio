@@ -1,0 +1,22 @@
+"""Trade summary information.
+
+"""
+type TradeInfo {
+    "Price point at which trade occurred."
+    price: String
+
+    "Quantity of asset that was traded."
+    quantity: String!
+
+    "Internal identifier of settlement being cleared."
+    settlementID: ID!
+
+    "Current clearing state."
+    state: String!
+
+    "Identifier of trade matched by trade engine."
+    tradeID: ID!
+
+    "Timestamp upon which trade was matched."
+    timestamp: Date!
+}

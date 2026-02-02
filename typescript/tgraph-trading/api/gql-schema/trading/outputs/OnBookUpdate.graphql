@@ -1,0 +1,10 @@
+"""A book containing a set of bids & asks, i.e. orders.
+
+"""
+type OnBookUpdate {
+    "Asset pair being traded, e.g. ETHBTC."
+    assetPair: AssetPairEnum!
+
+    "Exchange with which book is associated."
+    exchange: ExchangeSymbol!
+}

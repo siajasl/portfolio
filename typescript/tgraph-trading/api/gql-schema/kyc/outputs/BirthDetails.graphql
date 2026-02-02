@@ -1,0 +1,15 @@
+# import * from "../../shared/Scalars.graphql"
+
+"""A person's birth related information.
+
+"""
+type BirthDetails {
+    "Country in which person was born."
+    country: Country!
+
+    "Date upon which person was born."
+    date: Date!
+
+    "Place where person was born."
+    place: String
+}

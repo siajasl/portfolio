@@ -1,0 +1,19 @@
+"""Information submitted to register a delegated refund transaction and delegated redeem script for a UTXO style network.
+
+"""
+input DoRegisterParticipationDelegatedTxsUtxoDataInput {
+    "A redeem transaction or script which can be completed by the exchange and inserted to the chain on behalf of the Customer once the secret is known"
+    redeemScript: String!
+
+    "A complete & signed transaction for refunding a channel after timeout."
+    refundTransaction: String!
+
+    "Identifier of settlement being processed."
+    settlementID: UUID!
+
+    "Refund fee"
+    refundFee: String!
+
+    "Redeem fee"
+    redeemFee: String!
+}

@@ -1,0 +1,62 @@
+# import * from "../shared/Envelope.graphql"
+# import * from "../shared/OpenEnvelope.graphql"
+
+# import * from "enums/AssetPair.graphql"
+# import * from "enums/ExchangeSymbol.graphql"
+# import * from "enums/BookSide.graphql"
+# import * from "enums/OrderFillPreference.graphql"
+# import * from "enums/OrderType.graphql"
+# import * from "enums/SettlementState.graphql"
+# import * from "enums/TradeState.graphql"
+
+# import * from "inputs/AddOrder.graphql"
+# import * from "inputs/AddOrderOptions.graphql"
+# import * from "inputs/CancelOrder.graphql"
+# import * from "inputs/GetOpenOrders.graphql"
+# import * from "inputs/GetOrder.graphql"
+# import * from "inputs/GetBook.graphql"
+# import * from "inputs/GetTradeHistory.graphql"
+# import * from "inputs/GetVolume.graphql"
+# import * from "inputs/OnBookUpdate.graphql"
+# import * from "inputs/OnOrderFill.graphql"
+
+# import * from "outputs/NewOrder.graphql"
+# import * from "outputs/Order.graphql"
+# import * from "outputs/Book.graphql"
+# import * from "outputs/OnBookUpdate.graphql"
+# import * from "outputs/OnOrderFill.graphql"
+# import * from "outputs/Trade.graphql"
+# import * from "outputs/TradeInfo.graphql"
+
+type Mutation {
+    "Submits an order for processing."
+    addOrder(input: AddOrderInput!, envelope: EnvelopeInput!): NewOrder
+
+    "Cancels a previously submitted order from an order book."
+    cancelOrder(input: CancelOrderInput!, envelope: EnvelopeInput!): Boolean
+}
+
+type Query {
+    "Returns overall 24h volume in USD."
+    getDailyVolume(input: GetVolumeInput, envelope: OpenEnvelopeInput!): Float
+
+    "Returns a customer's order details."
+    getOrder(input: GetOrderInput, envelope: EnvelopeInput!): Order
+
+    "Returns a customer's open orders."
+    getOpenOrders(input: GetOpenOrdersInput!, envelope: EnvelopeInput!): [Order]
+
+    "Returns an order book."
+    getBook(input: GetBookInput!, envelope: OpenEnvelopeInput!): Book
+
+    "Returns trade history."
+    getTradeHistory(input: GetTradeHistoryInput!, envelope: EnvelopeInput!): [Trade]
+}
+
+type Subscription {
+    "Event raised when an order book is updated."
+    onBookUpdate(input: OnBookUpdateInput!, envelope: EnvelopeInput!): OnBookUpdate!
+
+    "Event raised when an order is filled."
+    onOrderFill(input: OnOrderFillInput!, envelope: EnvelopeInput!): OnOrderFill!
+}

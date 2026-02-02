@@ -1,0 +1,19 @@
+"""Information submitted by counter-party participating in settlement.
+
+"""
+input DoSettleInput {
+    "Channel identifier."
+    channelID: UUID!
+
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Channel hashed pre-image."
+    hashedSecret: String!
+
+    "Channel contract transaction hash."
+    txContractHash: String!
+
+    "Settlement identifier."
+    settlementID: UUID!
+}

@@ -1,0 +1,17 @@
+# import EmailAddress from "../../shared/Scalars.graphql"
+
+# import TelephoneNumber from "TelephoneNumber.graphql"
+
+"""Encpasulates contact details for an entity or individual.
+
+"""
+type ContactDetails {
+    "Contacts's email address."
+    email: EmailAddress!
+
+    "Contact's postal address."
+    postalAddress: PostalAddress
+
+    "Contacts's telephone numbers."
+    telephoneNumbers: [TelephoneNumber]
+}

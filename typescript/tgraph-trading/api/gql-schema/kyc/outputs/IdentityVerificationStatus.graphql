@@ -1,0 +1,10 @@
+"""Identity verifier's verification initiation API response data.
+
+"""
+type IdentityVerificationStatus {
+    "Explanation of why validation failed."
+    rejectionReason: String
+
+    "Current identitiy verification state."
+    status: VerificationStatusEnum!
+}

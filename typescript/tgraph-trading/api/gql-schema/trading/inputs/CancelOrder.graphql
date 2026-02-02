@@ -1,0 +1,10 @@
+"""Information submitted when cancelling an order.
+
+"""
+input CancelOrderInput {
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Unique order identifier."
+    orderID: UUID!
+}

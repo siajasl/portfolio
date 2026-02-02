@@ -1,0 +1,6 @@
+"""Enumeration over supported asset pairs.
+
+"""
+enum AssetPairEnum {
+    ETHBTC
+}

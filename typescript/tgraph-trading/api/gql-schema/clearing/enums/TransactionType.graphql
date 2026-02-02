@@ -1,0 +1,13 @@
+"""Enumeration over transaction types.
+
+"""
+enum TransactionTypeEnum {
+    "A channel's contract deployment transaction."
+    CONTRACT
+
+    "A channel's refund transaction."
+    REFUND
+
+    "A channel's redeem transaction."
+    REDEEM
+}

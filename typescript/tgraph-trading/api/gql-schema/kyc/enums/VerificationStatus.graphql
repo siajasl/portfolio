@@ -1,0 +1,16 @@
+"""Enumeration over the types of verification states.
+
+"""
+enum VerificationStatusEnum {
+    "Verification is pending."
+    Pending
+
+    "Verification is confirmed (at current level)."
+    Verified
+
+    "Verification is rejected (at current level)."
+    Rejected
+
+    "Something went wrong in the verification process itself."
+    Error
+}

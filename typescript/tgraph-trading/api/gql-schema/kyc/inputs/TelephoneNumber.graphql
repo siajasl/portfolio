@@ -1,0 +1,13 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "../enums/TelephoneNumberType.graphql"
+
+"""A person's birth related information.
+
+"""
+input TelephoneNumberInput {
+    "The telephone number."
+    number: PhoneNumber
+
+    "The type of telephone number."
+    numberType: TelephoneNumberTypeEnum
+}

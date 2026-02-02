@@ -1,0 +1,24 @@
+# import * from "./Document.graphql"
+
+"""Set of corporate customer documents that are required by law.
+
+"""
+input CorporateCustomerRequiredDocumentsInput {
+    "Corporation's articles of association."
+    articlesOfAssociation: DocumentInput!
+
+    "Corporation's certificate of good standing."
+    certificateOfGoodStanding: DocumentInput!
+
+    "Corporation's incorporation details."
+    certificateOfIncorporation: DocumentInput!
+
+    "Corporation's shareholding structure."
+    shareholdingStructure: DocumentInput!
+
+    "Corporation's proof of source of funds information."
+    sourceOfFunds: DocumentInput!
+
+    "Corporation's proof of source of funds information."
+    sourceOfWealth: DocumentInput!
+}

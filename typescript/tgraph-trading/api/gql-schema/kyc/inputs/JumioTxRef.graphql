@@ -1,0 +1,8 @@
+
+"""Information required to retrieve Jumio verification data.
+
+"""
+input JumioTxRef {
+    "Jumio Transaction Reference."
+    JumioTxRef: String!
+}

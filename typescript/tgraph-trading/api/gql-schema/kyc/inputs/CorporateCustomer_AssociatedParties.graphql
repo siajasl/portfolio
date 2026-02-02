@@ -1,0 +1,25 @@
+# import * from "./AssociatedIndividual.graphql"
+# import * from "./AssociatedEntity.graphql"
+
+"""Parties associated with the corporation in some way.
+
+"""
+input CorporateCustomerAssociatedPartiesInput {
+    "Corporation's directors."
+    directors: [AssociatedIndividualInput]!
+
+    "Set of business entity shareholders."
+    shareholdingEntities: [AssociatedEntityInput]
+
+    "Set of individual shareholders."
+    shareholdingIndividuals: [AssociatedIndividualInput]
+
+    "Corporation's authorised signatories."
+    signatories: [AssociatedIndividualInput]!
+
+    "Set of business entity ultimate beneficiary owners."
+    uboEntities: [AssociatedEntityInput]
+
+    "Set of individual ultimate beneficiary owners."
+    uboIndividuals: [AssociatedIndividualInput]
+}

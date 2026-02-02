@@ -1,0 +1,25 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "../enums/DocumentEncoding.graphql"
+
+"""Digital version of a document.
+
+"""
+type Document {
+    "Document content."
+    content: String!
+
+    "Type of document being stored."
+    documentType: String!
+
+    "Document content encoding format."
+    encoding: DocumentEncodingEnum!
+
+    "Jurisdiction applying to the document."
+    jurisdiction: Country
+
+    "Date from which the document is considered valid."
+    validFromDate: Date
+
+    "Date at which the document is considered invalid."
+    validToDate: Date
+}

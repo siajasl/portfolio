@@ -1,0 +1,10 @@
+"""Information submitted when placing an order.
+
+"""
+input GetOrderInput {
+    "Customer identifier."
+    customerID: CustomerID!
+
+    "Order identifier."
+    orderID: UUID!
+}

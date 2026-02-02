@@ -1,0 +1,16 @@
+"""Represents optional information that influences order processing.
+
+"""
+input AddOrderOptionsInput {
+    "Customer defined fill preference - ALL | PARTIAL"
+    fillPreference: OrderFillPreferenceEnum
+
+    "The lowest quantity fill that a maker will accept."
+    fillLowerBound: String
+
+    "Merchant identifier."
+    merchantID: ID
+
+    "The identifier of an OTC order for matching purposes."
+    otcOrderID: ID
+}

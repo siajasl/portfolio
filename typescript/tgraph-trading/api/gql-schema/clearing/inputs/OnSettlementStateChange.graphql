@@ -1,0 +1,7 @@
+"""Information submitted when subscribing to settlement state change event.
+
+"""
+input OnSettlementStateChangeInput {
+    "Customer identifier."
+    customerID: CustomerID!
+}

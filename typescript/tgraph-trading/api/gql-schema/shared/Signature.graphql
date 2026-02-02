@@ -1,0 +1,10 @@
+"""ED25519 elliptic curve signature information.
+
+"""
+input SignatureInput {
+    "Public key used to verify signature."
+    publicKey: ID!
+
+    "A digital signature."
+    signature: String!
+}

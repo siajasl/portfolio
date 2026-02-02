@@ -1,0 +1,10 @@
+"""Enumeration over supported order processing preferences.
+
+"""
+enum OrderFillPreferenceEnum {
+    "Customer wishes completely fulfillment otherwise take order is cancelled."
+    ALL
+
+    "Customer accepts partially fulfillment."
+    PARTIAL
+}

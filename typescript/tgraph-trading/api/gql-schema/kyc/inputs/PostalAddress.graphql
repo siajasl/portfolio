@@ -1,0 +1,33 @@
+# import Country from "../../shared/Scalars.graphql"
+
+"""A postal address.
+
+"""
+input PostalAddressInput {
+    "Postal address line 01."
+    streetLine01: String!
+
+    "Postal address line 02."
+    streetLine02: String
+
+    "Postal address line 03."
+    streetLine03: String
+
+    "Postal address line 04."
+    streetLine04: String
+
+    "City, e.g. Zug."
+    city: String!
+
+    "State, e.g. Zug."
+    state: String!
+
+    "County, e.g. Zug."
+    county: String
+
+    "State, e.g. 6300."
+    zipCode: String!
+
+    "Country code, e.g. CH."
+    country: Country!
+}

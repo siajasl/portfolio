@@ -1,0 +1,21 @@
+# import * from "../enums/CustomerType.graphql"
+
+"""Customer summary information.
+
+"""
+type CustomerInfo {
+    "Customer's identifier."
+    customerID: ID!
+
+    "Customer type (individual | corporate)."
+    type: CustomerTypeEnum!
+
+    "Customer's current verification level."
+    verificationLevel: VerificationLevelEnum!
+
+    "Customer's verification status."
+    verificationStatus: VerificationStatusEnum!
+
+    "Identity provider's transaction id."
+    verificationTxReference: String
+}

@@ -1,0 +1,38 @@
+"""The Country scalar type represents an ISO 3166 2 character country code.
+See: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes.
+
+"""
+scalar Country
+
+"""A customer ID ultimately maps to an access file public key.
+
+"""
+scalar CustomerID
+
+"""The Date scalar type represents an ISO compliant date.
+
+"""
+scalar Date
+
+"""UUID is an acronym for 'Universally Unique Identifier'.
+It is a 128-bit integer number used to identify resources
+
+"""
+scalar UUID
+
+"""A field whose value conforms to the standard internet email address format.
+See: RFC822: https://www.w3.org/Protocols/rfc822.
+
+"""
+scalar EmailAddress
+
+"""A field whose value conforms to the standard E.164 format, e.g. +17895551234.
+See : https://en.wikipedia.org/wiki/E.164.
+
+"""
+scalar PhoneNumber
+
+"""A field whose value is a postive integer.
+
+"""
+scalar PostiveInt

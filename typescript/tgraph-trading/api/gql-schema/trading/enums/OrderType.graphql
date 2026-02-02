@@ -1,0 +1,10 @@
+"""Enumeration over the types of order.
+
+"""
+enum OrderTypeEnum {
+    "A limit order."
+    LIMIT
+
+    "A market order."
+    MARKET
+}

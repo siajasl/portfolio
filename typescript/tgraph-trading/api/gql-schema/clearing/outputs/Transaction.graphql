@@ -1,0 +1,42 @@
+"""DLT transaction information.
+
+"""
+type Transaction {
+    "DLT transaction's unique identifier (i.e. hash)."
+    hash: String
+
+    "The script to run in the case of UTXO DLT's."
+    script: String
+
+    "A secret used primarily in redemption scenarios."
+    secret: String
+
+    "A signature used in various scenarios."
+    signature: String
+
+    "Internal identifier for x-referencing purposes."
+    transactionID: UUID!
+
+    "DLT transaction's current state."
+    state: String!
+
+    "Transaction state history."
+    stateHistory: [TransactionState!]
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+
+    "Transaction type."
+    type: TransactionTypeEnum!
+}
+
+"""DLT transaction state history.
+
+"""
+type TransactionState {
+    "Transaction state."
+    state: String!
+
+    "Timestamp for tracking scenarios."
+    timestamp: Date!
+}

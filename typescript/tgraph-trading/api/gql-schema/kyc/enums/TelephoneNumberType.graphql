@@ -1,0 +1,13 @@
+"""Enumeration over the types of telephone number.
+
+"""
+enum TelephoneNumberTypeEnum {
+    "A mobile number."
+    Mobile
+
+    "A home number."
+    Home
+
+    "A work number."
+    Work
+}

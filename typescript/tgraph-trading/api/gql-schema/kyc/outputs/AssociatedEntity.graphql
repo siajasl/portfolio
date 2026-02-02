@@ -1,0 +1,29 @@
+# import Document from "../../shared/Scalars.graphql"
+# import * from "ContactDetails.graphql"
+# import * from "Document.graphql"
+
+"""A business entity associated to the platform.
+
+"""
+type AssociatedEntity {
+    "Corporation's incorporation details."
+    certificateOfIncorporation: Document
+
+    "Entity's contact details."
+    contactDetails: ContactDetails
+
+    "Flag indicating whether the entity is politically exposed."
+    isPoliticallyExposed: Boolean
+
+    "Entity's name."
+    name: String!
+
+    "Entity's registration number."
+    registrationNumber: String!
+
+    "Entity's proof of funds information."
+    sourceOfFunds: Document
+
+    "Entity's proof of source of wealth information."
+    sourceOfWealth: Document
+}

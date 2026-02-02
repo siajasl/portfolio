@@ -1,0 +1,13 @@
+# import * from "../../shared/Scalars.graphql"
+# import * from "./IdentityCardScan.graphql"
+
+"""Information required to verify individual level 1 information. Requires authentication.
+
+"""
+input VerifyIndividualCustomerLevel1Input {
+    "Customer's identifier."
+    customerID: ID!
+
+    "Identity verifier's transaction reference."
+    verificationTxReference: String!
+}
