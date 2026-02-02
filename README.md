@@ -1,8 +1,12 @@
 # Portfolio
 
-- Polygot clean-code portfolio of projects past and present.  All code has been handcrafted - i.e. pre-ai (remember then ?).  
+- Polygot clean-code portfolio of projects past and present.  
+
+- All code has been handcrafted - i.e. pre-ai :).  
 
 - My coding philosphy can be summed up as follows: "Islands of complexity in a sea of simplicity".
+
+- All code existed within context of production systems - they are not hobby projects :).
 
 ## Contents
 
