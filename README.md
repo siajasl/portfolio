@@ -6,9 +6,9 @@
 
 - My coding philosphy can be summed up as follows: "Islands of complexity in a sea of simplicity".
 
-- All code existed within context of production systems - they are not hobby projects :).
+- All code existed within context of production systems - they are not hobby projects.
 
-- Before code there is system design ... that's another of my skillsets.
+- Before code there is system design ... that's another of my skillsets :).
 
 ## Contents
 
