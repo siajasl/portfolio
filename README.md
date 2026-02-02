@@ -14,7 +14,7 @@
 
 - `/csharp`
 
-  - `/hibou`  A .NET end-to-end application development framework.
+  - `/hibou`  A C# .NET end-to-end application development framework.
 
 - `/python`
   
