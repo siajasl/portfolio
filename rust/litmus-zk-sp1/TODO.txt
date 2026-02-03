@@ -1,0 +1,16 @@
+- block hash computation & verification
+- era consensus info scoped by previous era
+- block verification logic
+    - assert recomputed block hash
+    - assert relative signature weight > 1/3
+
+- cross-cutting
+    - use of inline annotation
+
+- block verification rules
+    - BL-000: Exception if block was not downloaded.
+    - BL-001: Exception if recomputed block hash is not equal to actual block hash.
+    - BL-002: Exception if switch block is not from a previous era.
+    - BL-003: Exception if a block signatory is not an era signatory.
+    - BL-004: Exception if a finality signature is invalid.
+    - BL-005: Exception if weight of finality signatures is insufficient.

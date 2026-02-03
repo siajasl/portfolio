@@ -1,0 +1,57 @@
+use serde::Serialize;
+
+use iris_mpc_common::IrisSerialId;
+use iris_mpc_cpu::{execution::hawk_main::BothEyes, protocol::shared_iris::GaloisRingSharedIris};
+
+use super::{
+    client::AwsClient,
+    errors::AwsClientError,
+    factory::{create_iris_code_shares, create_iris_code_shares_s3},
+    types::S3ObjectInfo,
+};
+use crate::constants::N_PARTIES;
+
+impl AwsClient {
+    /// Uploads Iris serial identifiers marked for deletion.
+    pub async fn s3_upload_iris_deletions(
+        &self,
+        data: &[IrisSerialId],
+    ) -> Result<(), AwsClientError> {
+        #[derive(Serialize)]
+        struct S3Data<'a> {
+            deleted_serial_ids: &'a [IrisSerialId],
+        }
+
+        let data = S3Data {
+            deleted_serial_ids: data,
+        };
+
+        let environment = self.config().environment();
+        let s3_bucket = format!("wf-smpcv2-{}-sync-protocol", environment);
+        let s3_key = format!("{}_deleted_serial_ids.json", environment);
+        let s3_obj = S3ObjectInfo::new(&s3_bucket, &s3_key, &data);
+        self.s3_put_object(&s3_obj)
+            .await
+            .map_err(|e| AwsClientError::IrisDeletionsUploadError(e.to_string()))
+    }
+
+    pub async fn s3_upload_iris_shares(
+        &self,
+        signup_id: &uuid::Uuid,
+        shares: &BothEyes<[GaloisRingSharedIris; N_PARTIES]>,
+    ) -> Result<S3ObjectInfo, AwsClientError> {
+        // Set AWS-S3 JSON compatible shares.
+        let shares = create_iris_code_shares_s3(
+            &create_iris_code_shares(signup_id, shares),
+            &self.public_keyset(),
+        );
+
+        // Upload to AWS-S3.
+        let s3_obj_info = S3ObjectInfo::new(
+            self.config().s3_request_bucket_name(),
+            &signup_id.to_string(),
+            &shares,
+        );
+        self.s3_put_object(&s3_obj_info).await.map(|_| s3_obj_info)
+    }
+}

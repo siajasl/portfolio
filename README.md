@@ -12,6 +12,16 @@
 
 ## Contents
 
+Listed below is a curated set of coding projects in various languages.  This is simply a representative sample and is thus non-exhaustive. 
+
+- `/rust`
+
+  - `/litmus-zk-sp1`  Rust SP1 ZK-VM light client for a layer-one blockchain network.
+
+  - `/iris-mpc/genesis`  Rust implementation of Worldcoin Iris-MPC protocol at genesis.  *NOTE*: Not all code was written by myself.
+
+  - `/iris-mpc/utils`  Rust utility functions for Worldcoin Iris-MPC protocol.
+  
 - `/csharp`
 
   - `/hibou`  A C# .NET end-to-end application development framework.
@@ -20,7 +30,7 @@
   
   - `/l1-sdk-py`  Python SDK for interacting with a layer one blockchain node (casper).
   
-  - `/pyessv`  Python library to manage controlled vocabularies used in climate chnage research.
+  - `/pyessv`  Python library to manage controlled vocabularies used in climate change research.
 
   - `/stests`  Python end to end layer one blockchain network (casper) test simulation workflow engine.
 
@@ -37,7 +47,3 @@
   - `/mpctl`  Bash application to work with a **local** IRIS-MPC CPU network.
 
 ## Further Information
-
-- https://github.com/asladeofgreen?tab=repositories
-
-- https://github.com/siajasl?tab=repositories
